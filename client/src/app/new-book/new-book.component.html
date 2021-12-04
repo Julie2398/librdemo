@@ -1,0 +1,70 @@
+<form #newbook="ngForm" (ngSubmit) = "AddBook()">
+    <div class="container addbook" style="background-color: rgba(0, 0, 0, 0.884);">
+      <h3 class="addbook-heading">Add New Book</h3>
+      <div class="row addbook-form">
+        <div class="col-md-2">
+          <label>Title</label>
+        </div> 
+        <div class="col-md-10">
+          <div class="form-group">
+            <input type="text" name="title" [(ngModel)]= "bookItem.title" id="title" class="form-control"  placeholder="Title of the book*"  style=" color: blanchedalmond;"required>
+            <span id="error1" style="color: red;font-size: 13px;"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <label>Author</label>
+        </div>
+        <div class="col-md-10">
+          <div class="form-group">
+            <input type="text" name="author" [(ngModel)]= "bookItem.author"  id="name" class="form-control" placeholder="Name of the author*"  style=" color: blanchedalmond;" required>
+            <span id="error2" style="color: red;font-size: 13px;"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <label>Genres</label>
+        </div>
+        <div class="col-md-10">
+            <div class="form-group">
+                <!-- <select class="selectpicker" name="genre" [(ngModel)]= "bookItem.genre" data-width="100%" multiple data-live-search="true" title="Click here to select the genres*" style=" color: rgb(17, 15, 11);" required >
+                    <option value="Fiction" >Fiction</option>
+                    <option value="Mystery" >Mystery</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Action">Action</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Supernatural">Supernatural</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Historical">Historical</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Tragedy">Tragedy</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Young adult fiction">Young Adult Fiction</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Childrens Literature">Childrens Literature</option>
+                    <option value="Science">Science</option>
+                    <option value="Novel">Novel</option>
+                </select> -->
+                <input type="text" name="genre" [(ngModel)]= "bookItem.genre"  class="form-control" placeholder="Genre of the book*"  style=" color: blanchedalmond;" required>
+                <span id="error3" style="color: red;font-size: 13px;"></span>
+            </div>
+        </div>
+               
+        <div class="col-md-2">
+          <label>Summary</label>
+        </div>
+        <div class="col-md-10">
+           <textarea class="form-control z-depth-1"  name="summary" [(ngModel)]= "bookItem.summary" style=" color: blanchedalmond;" id="exampleFormControlTextarea6" rows="3" placeholder="Summary of the plot*" required></textarea>
+        </div>
+        
+        <label>Choose a cover image </label> <br>
+        <textarea class="form-control z-depth-1"  name="image" [(ngModel)]= "bookItem.image" style=" color: blanchedalmond;" id="exampleFormControlTextarea6" rows="2" placeholder="Copy and paste the image address here*" required></textarea>
+          
+          <!-- <img id="preview" src="/images/bookplaceholder.jpg" onclick="show()" style="cursor: pointer;"> -->
+         
+          <input type="submit" [disabled]="newbook.invalid" class="btnnewbook" value="Add">
+        </div>   
+   
+    </div>
+  </form>
+
