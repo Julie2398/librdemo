@@ -1,0 +1,78 @@
+<div class="container" style="text-align:left; margin-top: 3em;margin-bottom: 5em;">
+  <h1>
+    {{ pageTitle }}
+  </h1>
+</div> 
+<div class='card container'>
+    <form (ngSubmit)="editProduct()">
+
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>Title</label></td>
+              <td><input type="text" name="p_id"  [(ngModel)]="productItem.title"/></td>                  
+            </tr>   
+            <tr>
+                <td><label>Author</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="productItem.author"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Genre</label></td>
+                <td><input type="text" name="p_code" [(ngModel)]="productItem.genre"/></td>                  
+              </tr>  
+              
+              <tr>
+                <td><label>Product imageUrl</label></td>
+                <td><input type="text" name="p_image" [(ngModel)]="productItem.image"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-success" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+     <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+     <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
